@@ -1,13 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using GitHub;
 
-namespace Scientist.Contracts
+namespace POC.Contracts
 {
     public class UserService : IUserService
     {
+        
+        public User ProcessUserExperiment(int userID)
+        {
+            var user = Scientist.Science<User>("ProcessUserExperiment", experiment =>
+             {
+                 experiment.Use(() => ProcessUser(userID));
+                 experiment.Try(() => InitialiseUser(userID));                 
+             });
+
+            return user;
+        }
 
         /// <summary>
         /// Old Code Block

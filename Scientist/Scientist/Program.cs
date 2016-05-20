@@ -1,11 +1,8 @@
-﻿using Scientist.Contracts;
+﻿using GitHub;
+using POC.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Scientist
+namespace POC
 {
     class Program
     {
@@ -20,7 +17,7 @@ namespace Scientist
             Console.WriteLine("What is your userID");
             Console.ReadLine();
 
-            User user = userService.ProcessUser(6);
+            User user = userService.ProcessUserExperiment(6);
 
             Console.WriteLine(string.Format(@"Welcome user {0}", user.UserName));
 
@@ -28,10 +25,12 @@ namespace Scientist
                 Console.WriteLine(string.Format(@"User {0} {1} is valid", user.FirstName, user.LastName));
 
             if (user.IsSecure)
-                Console.WriteLine(string.Format(@"User {0} {1} is on a secure connection", user.FirstName, user.LastName));
+                Console.WriteLine(string.Format(@"User {0} {1} is on a secure connection", user.FirstName, user.LastName));            
+
 
             Console.WriteLine("Press any key to continue");
             Console.ReadLine();
         }
     }
 }
+
