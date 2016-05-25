@@ -7,8 +7,8 @@
     <ProjectGuid>{52B9050D-970F-459B-B161-09F8D9F97955}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scientist</RootNamespace>
-    <AssemblyName>Scientist</AssemblyName>
+    <RootNamespace>POC</RootNamespace>
+    <AssemblyName>POC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
